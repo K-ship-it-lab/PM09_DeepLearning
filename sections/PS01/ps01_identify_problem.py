@@ -6,7 +6,7 @@ print("=" * 60)
 print("PM-09-PS01: IDENTIFY A PROBLEM")
 print("=" * 60)
 
-data_path = "../../hr_data.csv"
+data_path = "hr_data.csv"
 if not os.path.exists(data_path):
     raise FileNotFoundError(
         f"Dataset not found at {data_path}. "
