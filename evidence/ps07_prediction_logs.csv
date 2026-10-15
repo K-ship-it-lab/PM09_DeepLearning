@@ -1,0 +1,4 @@
+timestamp,input,prediction,confidence
+2026-10-15T13:05:45.710896,"{'Department': 'Engineering', 'YearsOfService': 12, 'IsManager': 1, 'PerformanceScore': 4.5, 'Age': 45}",Senior,0.9975
+2026-10-15T13:05:45.774591,"{'Department': 'Support', 'YearsOfService': 2, 'IsManager': 0, 'PerformanceScore': 3.0, 'Age': 25}",Junior,0.9764
+2026-10-15T13:05:45.837695,"{'Department': 'Management', 'YearsOfService': 20, 'IsManager': 1, 'PerformanceScore': 4.8, 'Age': 55}",Senior,1.0
