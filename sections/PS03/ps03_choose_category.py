@@ -29,8 +29,8 @@ print("""
 """)
 
 print("--- DATA ANALYSIS FOR CATEGORY SELECTION ---")
-y_train = np.load("../../models/y_train.npy")
-X_train = np.load("../../models/X_train.npy")
+y_train = np.load("models/y_train.npy")
+X_train = np.load("models/X_train.npy")
 
 print(f"Training features shape: {X_train.shape}")
 print(f"Training labels shape:   {y_train.shape}")
