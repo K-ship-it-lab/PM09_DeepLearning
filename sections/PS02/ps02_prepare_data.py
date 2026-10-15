@@ -55,8 +55,8 @@ df['SalaryBandEncoded'] = label_encoder.fit_transform(df['SalaryBand'])
 print(f"Target classes: {list(label_encoder.classes_)}")
 print(f"Encoded as: {list(range(len(label_encoder.classes_)))}")
 
-os.makedirs("../../models", exist_ok=True)
-joblib.dump(label_encoder, "../../models/label_encoder.pkl")
+os.makedirs("models", exist_ok=True)
+joblib.dump(label_encoder, "models/label_encoder.pkl")
 
 # 6. SPLIT: 70% TRAIN / 15% VALIDATION / 15% TEST
 print("\n--- SPLITTING DATA: 70% TRAIN / 15% VALIDATION / 15% TEST ---")
@@ -87,15 +87,15 @@ X_test = scaler.transform(X_test)
 print(f"Feature means (train): {X_train.mean(axis=0).round(3)}")
 print(f"Feature stds  (train): {X_train.std(axis=0).round(3)}")
 
-joblib.dump(scaler, "../../models/scaler.pkl")
-joblib.dump(feature_cols, "../../models/feature_cols.pkl")
+joblib.dump(scaler, "models/scaler.pkl")
+joblib.dump(feature_cols, "models/feature_cols.pkl")
 
-np.save("../../models/X_train.npy", X_train)
-np.save("../../models/X_val.npy", X_val)
-np.save("../../models/X_test.npy", X_test)
-np.save("../../models/y_train.npy", y_train)
-np.save("../../models/y_val.npy", y_val)
-np.save("../../models/y_test.npy", y_test)
+np.save("models/X_train.npy", X_train)
+np.save("models/X_val.npy", X_val)
+np.save("models/X_test.npy", X_test)
+np.save("models/y_train.npy", y_train)
+np.save("models/y_val.npy", y_val)
+np.save("models/y_test.npy", y_test)
 
 # 8. EXPLORE CLASS DISTRIBUTION IN EACH SPLIT
 print("\n--- CLASS DISTRIBUTION IN EACH SPLIT ---")
